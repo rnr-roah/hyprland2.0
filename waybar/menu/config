@@ -1,0 +1,17 @@
+{
+  "layer": "overlay",
+  "exclusive": false,
+  "position": "top",
+  "height": 30,
+
+  "modules-right": ["clock", "battery"],
+
+  "clock": {
+    "format": "{:%H:%M}"
+  },
+
+  "battery": {
+    "format": "{capacity}%"
+  }
+}
+
