@@ -18,10 +18,10 @@
 	"format": "{icon}",
 	"format-dnd":"dnd",
 	"format-icons": { 
-		"notification": "󰂚", 
-		"none": "",
-		"dnd-none": "󰂛",
-		"dnd-notification": "󰂛" 
+		"notification": "   󰂚", 
+		"none": "   ",
+		"dnd-none": "   󰂛",
+		"dnd-notification": "   󰂛" 
 	}, 
 	"on-click": "swaync-client -t" 
 },
@@ -86,7 +86,7 @@
     "custom/window-name": {
     "format": " <b>{}</b>",
     "interval": 1,
-    "max-length": 15,
+    "max-length": 20,
     "exec": "hyprctl activewindow | grep class | awk '{print $2}'"
   },
    
@@ -94,8 +94,16 @@
       "format": "<span color='#a8cd76'> {icon} </span>",
       "format-alt": "<span color='#a8cd76'>{icon} {capacity}% : {time}</span>",
       "on-click-right": "alacritty -e htop",
-      "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-      "format-charging": "<span color='#a8cd76'></span> {capacity}%"
+      "format-icons": [
+	      "<span color='#f70505'>󰂎[critical]!!</span>", 
+	      "<span color='#f70505'>󰁺</span>", 
+	      "<span color='#f27e35'>󰁻</span>", 
+	      "<span color='#f27e35'>󰁼</span>", 
+	      "󰁽", 
+	      "󰁿", 
+	      "󰂀", "󰂁", "󰂂", "󰁹"],
+      "format-charging": "<span color='#a8cd76'></span>",
+      "format-charging-alt": "<span color='#a8cd76'></span> {capacity}%"
     },
     "network": {
     "format-wifi": "<span color='#90cdfa'>  </span>",
@@ -156,9 +164,9 @@
 
     "tray": {
     "format": "",
-    "icon-size": 15,
+    "icon-size": 14,
     "reverse-direction": false,
-    "spacing": 8,
+    "spacing": 12,
     "show-disconnected": false
     },
 
