@@ -12,7 +12,8 @@
   font-family: 'JetBrainsMono Nerd Font' , 'Symbols Only';
   font-size: 14px;
   font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-  min-height: 10px;
+  min-height: 40px;
+  min-width: 80px;
   transition: 60ms;
 }
 * {
@@ -85,7 +86,7 @@ window#waybar {
 
 
 /*For notification and clock*/
-#clock{
+#cpu{
   border-radius: 0px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -99,7 +100,7 @@ window#waybar {
   padding-left: 10px;
   padding-right: 10px;
 }
-#custom-spacer2{
+#clock, #memory{
   border-radius: 0px;
   color: #c0caf5;
   margin-top: 5px;
@@ -111,19 +112,41 @@ window#waybar {
   padding-right: 7px;
 }
 
-#custom-notifications {
+#custom-spacer2{
   border-radius: 0px;
+  color: #c0caf5;
+  margin-top: 5px;
+  background-color: @background;
+  opacity: 0.75;
+  margin-bottom: 5px;
+	margin-right: -10px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+#temperature{
+  color: #c0caf5;
+  margin-top: 5px;
+  background-color: @background;
+  opacity: 0.75;
+  margin-bottom: 5px;
+	margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  background-color: @background;
-  color: #c0caf5;
-  opacity: 0.75;
+
+}
+#custom-lock, #custom-logout, #custom-shutdown, #custom-reboot {
+  border-radius: 10px;
+  background-color: @background-alt2;
+  color: #F27E35;
+  opacity: 1;
   margin-top: 5px;
   margin-bottom: 5px;
 	margin-right: 5px;
-  padding-top: 1px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-top: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 
@@ -150,19 +173,18 @@ window#waybar {
 	opacity:0.5;
 }
 
-
-#workspaces{
+#workspaces {
   border-radius: 10px;
   background-color: transparent;
   color: grey;
-  margin-top: 6px;
-  margin-bottom: 6px;
-  margin-right: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px;
   padding-top: 1px;
-  padding-left: 8px;
+  padding-left: 10px;
   padding-right: 10px;
   font-size: 8px;
-  margin-left: 0px;
+  margin-left: 5px;
 }
 #workspaces button {
   background: transparent;
@@ -177,40 +199,6 @@ window#waybar {
 	opacity:0.6;
 	background: @background-alt2;
 }
-
-#custom-dropdown {
-  /*color: #c0caf5;*/
-	color: #c0caf5;
-	opacity:0.6;
-	border-radius: 100px;
-	margin-top:11px;
-	margin-bottom:11px;
-	background: @background-alt2;
-        border-radius: 10px;
-  	padding-top: 6px;
-  	padding-bottom: 5px;
-  	padding-left: 7px;
-  	padding-right: 7px;
-  	font-size: 10px;
-}
-
-
-#custom-shot {
-  /*color: #c0caf5;*/
-	color: #c0caf5;
-	opacity:0.6;
-	border-radius: 100px;
-	margin-top:11px;
-	margin-bottom:11px;
-	background: @background-alt2;
-        border-radius: 10px;
-  	padding-top: 6px;
-  	padding-bottom: 5px;
-  	padding-left: 7px;
-  	padding-right: 7px;
-  	font-size: 10px;
-}
-
 
 #custom-playerctl{
   border-radius: 10px;

@@ -1,12 +1,8 @@
 {
   "layer": "top",
-  "exclusive": true,
+  "exclusive": false,
     "height": 39,
-    "modules-left": ["custom/power_mode","backlight","pulseaudio","battery","network","custom/spacer1", "tray","custom/window-name"],
-
-    "modules-center": ["custom/dropdown","hyprland/workspaces","custom/shot"],
-
-    "modules-right": ["custom/playerctl","clock","custom/spacer2", "custom/notifications"],
+    "modules-center": ["cpu","memory","temperature","custom/reboot","custom/shutdown", "custom/logout", "custom/lock"],
     "custom/arch": {
       "format": "",
       "on-click": "tofi-drun --drun-launch=true"
@@ -68,20 +64,11 @@
     "custom/spacer2": {
       "format": "|"
     },
-  
-    "custom/shot": {
-    "format": "󱣴",
-    "on-click": "hyprshot -m region --clipboard-only"
-  },
- 
-  "custom/dropdown": {
-    "format": "",
-    "format-alt": "<span color='red'>      </span>",
-    "on-click": "exec /home/roah/.config/waybar/extra/waybar-drop.sh"
-  },
-
-
-
+    "dragshot": {
+      "format": "󱣴",
+      "on-click": "hyprshot -m region --clipboard-only"
+    },
+   
     "backlight": {
       "device": "amdgpu_b10",
       "format": "<span color='#d9b172'>{icon}</span>",
@@ -142,6 +129,30 @@
     "return-type": "json",
       "tooltip-format": "Power mode: {}"
   },
+ "custom/shot": {
+    "format": "󱣴",
+    "on-click": "hyprshot -m region --clipboard-only"
+  },
+ "custom/shutdown": {
+    "format": "󰐥",
+    "on-click": "kitty -e termdown 5s && hyprshot -m poweroff"
+  },
+ "custom/reboot": {
+    "format": "",
+    "on-click": "kitty -e termdown 5s && reboot"
+  },
+ "custom/logout": {
+    "format": "󰗽",
+    "on-click": "kitty -e termdown 5s && hyprctl dispatch exit"
+  },
+"custom/lock": {
+    "format": "",
+    "on-click": "hyprlock"
+  },
+
+
+
+
 
 
     "pulseaudio": {

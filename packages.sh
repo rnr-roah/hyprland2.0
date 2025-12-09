@@ -26,4 +26,6 @@ sudo pacman -S --noconfirm --needed swaync
 
 sudo pacman -S --noconfirm --needed swayosd
 
+sudo pacman -S --noconfirm --needed ttf-jetbrains-mono-ner
+sudo pacman -S --noconfirm --needed swaybg
 
