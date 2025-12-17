@@ -1,6 +1,10 @@
 #!/bin/bash
 
-sudo pacman -S --needed --noconfirm git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+cd /tmp
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
 cd
 sudo pacman -S --noconfirm --needed waybar
 
@@ -28,4 +32,5 @@ sudo pacman -S --noconfirm --needed swayosd
 
 sudo pacman -S --noconfirm --needed ttf-jetbrains-mono-ner
 sudo pacman -S --noconfirm --needed swaybg
+sudo pacman -S rofi-wayland imv
 
